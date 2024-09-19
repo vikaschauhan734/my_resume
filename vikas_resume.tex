@@ -1,0 +1,223 @@
+% Use XeLaTeX + MakeIndex + BibTex for compilation
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\usepackage{fontawesome5}
+\usepackage[normalem]{ulem}
+\setmainfont{Arial}
+
+\begin{document}
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Vikas Chauhan} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{\underline{\raisebox{-0.05\height}{\faEnvelope} chauhanvikas734@gmail.com} $|$}
+\textcolor[HTML]{371e77}{\underline{\raisebox{-0.05\height}{\faMobile} (839) 798-5387} $|$}
+\textcolor[HTML]{371e77}{\underline{\href{https://vikaschauhan734.github.io/portfolio/}{\raisebox{-0.05\height}{\faGlobeAsia} https://vikaschauhan734.github.io/portfolio/}}}
+\textcolor[HTML]{371e77}{\underline{\href{https://github.com/vikaschauhan734}{\raisebox{-0.05\height}{\faGithub} github.com/vikaschauhan734}} $|$}
+\textcolor[HTML]{371e77}{\underline{\href{https://linkedin.com/in/vikas-chauhan-700a7b189/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/vikas-chauhan-700a7b189/}}}
+\end{tabularx}
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{} l X r @{} }
+\color[HTML]{1C033C} \textbf{Guru Jambheshwar University of Science \& Technology, Hisar} & & \color[HTML]{371e77} Oct. 2020 - Jul. 2022 \\
+M.Sc. in Mathematics & & \color[HTML]{4B28A4} \textit{\textbf{CGPA: 7.67/10}}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{} l X r @{} }
+\color[HTML]{1C033C} \textbf{Guru Jambheshwar University of Science \& Technology, Hisar} & & \color[HTML]{371e77} Jul. 2017 - Oct. 2020 \\
+B.Sc. in Mathematics & & \color[HTML]{4B28A4} \textit{\textbf{CGPA: 7.21/10}}
+\end{tabularx}
+
+% Certifications
+\section{Certifications}
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+\color[HTML]{1C033C} \textbf{Microsoft Certified: Azure Data Scientist Associate} & \hfill \color[HTML]{371e77} Feb. 2023 - Feb. 2025 \\[4pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+\color[HTML]{1C033C} \textbf{Microsoft Certified: Azure Data Fundamentals} & \hfill \color[HTML]{371e77} Dec. 2022 \\[4pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+\color[HTML]{1C033C} \textbf{AWS Certified: Cloud Practitioner} & \hfill \color[HTML]{371e77} Nov. 2022 - Nov. 2025 \\[4pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+\color[HTML]{1C033C} \textbf{Microsoft Certified: Azure Administrator Associate} & \hfill \color[HTML]{371e77} Oct. 2022 - Oct. 2024 \\[4pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+\color[HTML]{1C033C} \textbf{Microsoft Certified: Azure Fundamentals} & \hfill \color[HTML]{371e77} Aug. 2022 \\[4pt]
+\end{tabularx}
+
+% Experience
+\section{Experience}
+
+\begin{tabularx}{\linewidth}{ @{} l X r @{} }
+\color[HTML]{1C033C} \textbf{Acadecraft Inc.} & & \color[HTML]{371e77} Jan. 2024 - Present \\
+Research Associate
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{} l X r @{} }
+\color[HTML]{1C033C} \textbf{Newbieron Technologies} & & \color[HTML]{371e77} Sept. 2023 - Oct. 2023 \\
+Data Scientist Intern
+\end{tabularx}
+
+% Projects
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/vehicle_number_plate_detection}{Vehicle Number Plate Recognition System}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Identifies vehicles and logs their entry into database}} \hfill \color[HTML]{4B28A4} \textit{Object Detection, OCR, Python, MySQL, BigQuery, DVC} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        	\item Created MySQL and BigQuery database.
+	\item Custom training of yolov10 object detection model.
+	\item Implemented EasyOCR to extract text from the number plates.
+	\item Logged the vehicle's entry time in the Vehicle Entry table.
+	\item Created Flask Web App.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/bank_marketing_campaign}{Bank Marketing Campaign Machine Learning Project}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Predicting the client will subscribe a term deposit or not}} \hfill \color[HTML]{4B28A4} \textit{Classification, Python, Flask, Docker, AWS, GitHub Actions} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+       	 \item Conducted EDA and performed data cleaning to prepare the dataset.
+	\item Implemented modular coding for data ingestion, transformation, and model training, enhancing reproducibility and scalability.
+	\item Created a Flask web application to provide a user-friendly interface for model predictions.
+	\item Dockerized the project for portability and consistency across different environments.
+	\item Deployed the Docker image on AWS EC2 instance for production deployment.
+	\item Set up Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions for seamless updates and maintenance.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/diabetes_prediction}{Diabetes Prediction}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Detecting diabetic and non-diabetic using random forest classifier algorithm }} \hfill \color[HTML]{4B28A4} \textit{Classification, Python, Git, Flask, AWS} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Trained and test multiple algorithms and achieved the precision and recall score of 0.98.
+        \item Created Flask Web App.
+	\item Deployed on AWS EC2 Instance.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/house_price_prediction}{Bengaluru House Price Prediction}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Predicting house price using linear regression algorithm}} \hfill \color[HTML]{4B28A4} \textit{Regression, Python, Power BI, Git} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Trained and test multiple algorithms and achieved the accuracy score of 0.84.
+        \item Created dashboard using Power BI.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/ats_llm_model}{ATS Tester LLM Project}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Classifies images as either Cat or Dog}} \hfill \color[HTML]{4B28A4} \textit{Gemini, Python, Git, Streamlit} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+	\item Created Streamlit Web App.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/cat_dog_classifier}{Cat Dog Classification}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Classifies images as either Cat or Dog}} \hfill \color[HTML]{4B28A4} \textit{CNN, Python, Git, Flask} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Created and trained multiple models; achieved the precision and recall score of 0.98 and 0.97 respectively.
+	\item Created Flask Web App.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/brain_tumors_classification}{Brain Tumors Classification}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Classifies images as brain tumor type}} \hfill \color[HTML]{4B28A4} \textit{CNN, Python, Git, Flask} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Created and trained multiple models; achieved the accuracy score of 0.93.
+	\item Created Flask Web App.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/fake_news_classifier}{Fake News Classification}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Predicting whether news article is fake or real}} \hfill \color[HTML]{4B28A4} \textit{NLP, Python, Git, Flask} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Trained and test multiple algorithms and achieved the precision and recall score of 0.93 and 0.92 respectively.
+	\item Created Flask Web App.
+    \end{itemize}
+    \end{minipage}
+
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/stock_sentiment_analysis}{Stock Sentiment Analysis}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Predicting whether stock price increase or decrease based on top 25 news headlines}} \hfill \color[HTML]{4B28A4} \textit{NLP, Python, Git} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Trained using Random Forest Classifier and achieved the precision and recall score of 0.96 and 0.97 respectively.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/vikaschauhan734/top_10000_popular_movies_analysis}{Top 10000 Popular Movie Analysis}}}\\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Extracting insights from data and visualization}} \hfill \color[HTML]{4B28A4} \textit{Python, Git} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Distribution based on Language, Genre, Production Company.
+	\item Popularity over time, Financial trends, genre and language analysis over time.
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+% Skills
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Languages:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} Python, SQL\\[3pt]
+\color[HTML]{1C033C}\textbf{Libraries:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, Tensorflow, Keras, nltk, OpenCV\\[3pt]
+\color[HTML]{1C033C}\textbf{Tools:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} Excel, Power BI, Tableau\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies:} \\[2pt]
+\color[HTML]{371e77} \hspace*{4ex} Git, Linux, Docker, MLOps, MLflow, DVC, GitHub Actions\\[3pt]
+\end{document}
